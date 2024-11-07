@@ -1,4 +1,3 @@
-/* Sfondo a schermo intero */
 body {
   font-family: Arial, sans-serif;
   color: white;
@@ -8,13 +7,13 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Americas_Gallery%2C_Minneapolis_Institute_of_Art-02.jpg/640px-Americas_Gallery%2C_Minneapolis_Institute_of_Art-02.jpg') no-repeat center center/cover;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/c/c9/Americas_Gallery%2C_Minneapolis_Institute_of_Art-02.jpg') no-repeat center center/cover;
   overflow: hidden;
   position: relative;
   text-align: center;
 }
 
-/* Overlay per animazione di transizione */
+/* Overlay for page transition animation */
 #transition-overlay {
   position: fixed;
   top: 0;
@@ -31,7 +30,6 @@ body {
   opacity: 1;
 }
 
-/* Stile per il testo dell'intestazione */
 header h1 {
   font-size: 3em;
   margin-bottom: 10px;
@@ -44,7 +42,6 @@ header p {
   margin-bottom: 20px;
 }
 
-/* Stile per i pulsanti */
 .button {
   text-decoration: none;
   color: white;
