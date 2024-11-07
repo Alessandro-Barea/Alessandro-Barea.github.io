@@ -40,21 +40,21 @@
       <h3>Titolo dell'Arte 2</h3>
       <p>Descrizione dell'opera d'arte qui.</p>
     </div>
-
-    <script>
-      document.querySelectorAll('.button').forEach(button => {
-        button.addEventListener('click', function(event) {
-          event.preventDefault();
-          const targetURL = this.getAttribute('href');
-          document.getElementById('transition-overlay').classList.add('fade-out');
-          setTimeout(() => {
-            window.location.href = targetURL;
-          }, 500);
-        });
-      });
-    </script>
-
+    
     <!-- Aggiungi altri blocchi gallery-item se necessario -->
   </section>
+
+  <script>
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetURL = this.getAttribute('href');
+        document.getElementById('transition-overlay').classList.add('fade-out');
+        setTimeout(() => {
+          window.location.href = targetURL;
+        }, 500);
+      });
+    });
+  </script>
 </body>
 </html>
