@@ -26,6 +26,20 @@
     <a href="index.html" class="button">Home</a>
     <a href="Facce.html" class="button">Volti</a>
   </nav>
+
+  <script>
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetURL = this.getAttribute('href');
+        document.getElementById('transition-overlay').classList.add('fade-out');
+        setTimeout(() => {
+          window.location.href = targetURL;
+        }, 500);
+      });
+    });
+  </script>
+  
   <!-- Sezione Galleria -->
   <section class="gallery">
     <!-- Sostituisci questa sezione con le immagini -->
@@ -49,18 +63,7 @@
 
     <!-- Aggiungi altri blocchi gallery-item se necessario -->
   </section>
-
-  <script>
-    document.querySelectorAll('.button').forEach(button => {
-      button.addEventListener('click', function(event) {
-        event.preventDefault();
-        const targetURL = this.getAttribute('href');
-        document.getElementById('transition-overlay').classList.add('fade-out');
-        setTimeout(() => {
-          window.location.href = targetURL;
-        }, 500);
-      });
-    });
-  </script>
+  
+  
 </body>
 </html>
