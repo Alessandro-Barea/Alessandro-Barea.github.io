@@ -2,16 +2,17 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=100%, initial-scale=1.0">
-  <title>Galleria d'Arte - Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galleria d'Arte - Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Overlay per animazione di transizione -->
+  <div id="transition-overlay"></div>
+  
   <header>
-    <h1>Homepage</h1>
-    <p>Esplora il mondo dell'arte e le sue varie forme.</p>
-    <!-- Immagine principale -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Americas_Gallery%2C_Minneapolis_Institute_of_Art-02.jpg/640px-Americas_Gallery%2C_Minneapolis_Institute_of_Art-02.jpg.jpg" alt="Immagine principale Homepage" class="main-image">
+    <h1>Benvenuti nella Galleria d'Arte</h1>
+    <p>Esplora vari stili d'arte: Astratto, Paesaggi e Volti Astratti.</p>
   </header>
   
   <nav>
@@ -20,5 +21,22 @@
     <a href="Facce.html" class="button">Volti Astratti</a>
   </nav>
 
+  <!-- JavaScript per l'animazione di transizione -->
+  <script>
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault(); // Previene il caricamento immediato della pagina
+        const targetURL = this.getAttribute('href'); // URL di destinazione
+
+        // Aggiunge la classe per l'animazione
+        document.getElementById('transition-overlay').classList.add('fade-out');
+
+        // Dopo l'animazione, vai alla nuova pagina
+        setTimeout(() => {
+          window.location.href = targetURL;
+        }, 500); // Durata dell'animazione in millisecondi
+      });
+    });
+  </script>
 </body>
 </html>
